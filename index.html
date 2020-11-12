@@ -10,7 +10,8 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
+    .attribution { font-size: 11px; text-align: center;
+      margin-top: 20px;}
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 
@@ -22,22 +23,24 @@
 <body>
 
 <!-- header-->
-<header>
+<header id="header">
 
   <!-- burger menu icon -->
   <a href="" id="burger_menu_icon"><img src="./public/images/icon-hamburger.svg" alt="hamburger menu icon"></a>
 
   <!-- title -->
-  <h1>room</h1>
+  <h1 id="header_title">room</h1>
 
 
   <!--navigation menu -->
-  <nav id="menu">
+  <nav id="navigation">
+    <a href="" id="close_nav_menu"><img src="./public/images/icon-close.svg" alt="close icon"></a>
+
     <ul>
-      <li>home</li>
-      <li>shop</li>
-      <li>about</li>
-      <li>contact</li>
+      <li><a href="">home</a></li>
+      <li><a href="">shop</a></li>
+      <li><a href="">about</a></li>
+      <li><a href="">contact</a></li>
     </ul>
   </nav>
 
@@ -79,5 +82,8 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Thomas SERRES</a>.
   </div>
+
+<!-- scripts -->
+<script src="./public/js/header.js"></script>
 </body>
 </html>

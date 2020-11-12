@@ -1,0 +1,36 @@
+/* colors */
+
+$dark_gray : hsl(0, 0%, 63%);
+$black : hsl(0, 0%, 0%);
+$white : hsl(0, 0%, 100%);
+$very_dark_gray : hsl(0, 0%, 27%);
+
+/* layout */
+
+$mobile : 375px;
+$desktop : 1440px;
+
+/* font */
+$font_size_body : 12px;
+
+@font-face {
+  font-family : "spartan_regular_500";
+  src: url("../../fonts/Spartan/static/Spartan-Regular.ttf");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family : "spartan_regular_600";
+  src: url("../../fonts/Spartan/static/Spartan-Regular.ttf");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family : "spartan_regular_700";
+  src: url("../../fonts/Spartan/static/Spartan-Regular.ttf");
+  font-weight: 700;
+}
+
+$spartan_500 : "spartan_regular_500";
+$spartan_600 : "spartan_regular_600";
+$spartan_700 : "spartan_regular_700";

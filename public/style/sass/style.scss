@@ -4,7 +4,6 @@
 
 body{
   //pour tests
-  background: bisque;
   font-family: $spartan_500;
   box-sizing: border-box;
   overflow-x: hidden;
@@ -15,69 +14,76 @@ body{
 }
 
 /* header */
+@import "header";
 
-header{
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  min-height: 15vh;
-  margin-bottom: 2vh;
+/* changing sections */
+.changing_sections{
+  width: 100%;
+  height: auto;
+  clear: both;
+  position: absolute;
+  top: 0;
 
-  /* nav bar*/
-  nav{
-    display: none;
-    min-height: 100%;
+  /* illustration divs */
+  .illustration_div{
     min-width: 100%;
-    align-items: center;
-    justify-content: space-between;
-
-    /* close button */
-    #close_nav_menu{
-      margin-left: 35px;
+    max-width: 100%;
+    min-height: 360px;
+    background-position: center center !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+  }
+    /* section 1 */
+    #section1_illustration{
+      background-image: url("../../images/mobile-image-hero-1.jpg");
     }
 
-    /* menus list */
-    ul{
+  /* textual content div */
+  .textual_content_div{
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 45px 0;
+
+    /* h2 */
+    h2{
+      font-family: $spartan_700;
+      font-weight: bold;
+      font-size: $font_size_body * 2;
+      color : $very_dark_gray;
+    }
+
+    /* p */
+    p{
+      font-size: $font_size_body;
+      font-family: $spartan_500;
+      color : $dark_gray;
+      line-height: $font_size_body * 1.5;
+      margin-bottom: 45px;
+    }
+
+    /* link */
+    .changing_sections_link{
+      font-family: $spartan_600;
+      text-transform: uppercase;
+      text-decoration: none;
+      color : $very_dark_gray;
       display: flex;
-      flex-wrap: nowrap;
       align-items: center;
-      justify-content: space-evenly;
-      margin-right: 35px;
+      justify-content: flex-start;
+      font-size: $font_size_body;
+      letter-spacing: 8px;
 
-      li{
-        list-style-type: none;
-        margin-left: 15px;
+      img{
+        margin-left: 25px;
+      }
 
-        &:first-of-type{
-          margin-left: 0;
-        }
-
-        a{
-          font-size: $font_size_body;
-          color: $black;
-          text-decoration: none;
-          font-family: $spartan_700;
-          font-weight: bold;
+      /* hover */
+      &:hover{
+        color: $dark_gray !important;
+        & > *{
+          color: $dark_gray !important;
         }
       }
     }
-  }
-
-  /* burger menu icon */
-  #burger_menu_icon{
-    margin-left: 45px;
-
-    img{
-      min-width: $font_size_body * 3;
-    }
-  }
-
-  /* h1 */
-  h1{
-    text-align: center;
-    margin: 0 auto;
-    color : $white;
-    font-size: $font_size_body * 3;
-
   }
 }

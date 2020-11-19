@@ -15,22 +15,29 @@ $font_size_body : 12px;
 
 @font-face {
   font-family : "spartan_regular_500";
-  src: url("../../fonts/Spartan/static/Spartan-Regular.ttf");
+  src: url("../../fonts/Spartan/static/Spartan-Regular.ttf") format("truetype");
   font-weight: 500;
 }
 
 @font-face {
   font-family : "spartan_regular_600";
-  src: url("../../fonts/Spartan/static/Spartan-Regular.ttf");
+  src: url("../../fonts/Spartan/static/Spartan-Regular.ttf") format("truetype");
   font-weight: 600;
 }
 
 @font-face {
-  font-family : "spartan_regular_700";
-  src: url("../../fonts/Spartan/static/Spartan-Regular.ttf");
+  font-family : "spartan_bold";
+  src: url("../../fonts/Spartan/static/Spartan-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family : "spartan_regular_thin";
+  src: url("../../fonts/Spartan/static/Spartan-Thin.ttf") format("truetype");
   font-weight: 700;
 }
 
 $spartan_500 : "spartan_regular_500";
 $spartan_600 : "spartan_regular_600";
-$spartan_700 : "spartan_regular_700";
+$spartan_700 : "spartan_bold";
+$spartan_thin : "spartan_regular_thin";

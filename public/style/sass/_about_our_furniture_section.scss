@@ -1,0 +1,48 @@
+div#about_our_furniture{
+  margin-top: 85vh;
+
+  /* illustrations*/
+  #illustration1, #illustration2{
+    width: 100%;
+    min-height: 265px;
+    max-height: 100%;
+
+    background-position: center center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+  }
+
+  #illustration1{
+    background-image: url("../../images/image-about-dark.jpg");
+  }
+
+  #illustration2{
+    background-image: url("../../images/image-about-light.jpg");
+  }
+
+  /* textual content */
+  #textual_content{
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 40px 0;
+
+    /* h3 */
+    h3{
+      font-family: $spartan_700;
+      color : $very_dark_gray;
+      text-transform: uppercase;
+      font-size: $font_size_body;
+      letter-spacing: $font_size_body * 0.4;
+    }
+
+    /* p */
+    p{
+      font-size: $font_size_body;
+      font-family: $spartan_500;
+      color : $dark_gray;
+      line-height: $font_size_body * 1.5;
+      margin-bottom: 45px;
+    }
+  }
+
+}

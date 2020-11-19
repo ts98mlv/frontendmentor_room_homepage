@@ -8,6 +8,26 @@ window.onload = () => {
     const navbar = document.getElementById("navigation");
     const navbar_ul = navbar.querySelectorAll("ul");
     const header = document.getElementById("header");
+    let actual_section = 1;
+    const changing_sections_count = document.getElementsByClassName("changing_sections").length;
+    const btns_next = document.querySelectorAll(".btn_next");
+    const btns_prev = document.querySelectorAll(".btn_prev");
+
+    /* functions */
+
+    /**
+     * hidde all the .changing_sections except the one which is wanted
+     * @param actual_section
+     */
+    function showChangingSection(actual_section){
+        const changing_sections = document.querySelectorAll(".changing_sections");
+
+        for(let i = 0; i < changing_sections.length ; i++){
+            changing_sections[i].style.display = "none";
+        };
+
+        document.querySelector("#section" + actual_section).style.display = "block";
+    }
 
     /* click on burger_menu_icon*/
     burger_menu_icon.addEventListener("click", function (element){
@@ -36,4 +56,34 @@ window.onload = () => {
         /* change header background color and change its height */
         header.style.background = "none";
     })
+
+    /* click on changing section button */
+    for(let i=0; i < btns_next.length ; i++){
+        /* .btn_next */
+        btns_next[i].addEventListener("click", function (){
+            /* if the actual section is the last, then we come back to the first one */
+            if(actual_section >= changing_sections_count){
+                actual_section = 1;
+            }else{ /* else we come to the next section */
+                actual_section += 1;
+            }
+
+            /* all the changing sections are hidden except the wanted section */
+            showChangingSection(actual_section);
+        })
+
+        /* .btn_prev */
+        btns_prev[i].addEventListener("click", function (){
+            /* if the actual section is the first, then we come back to the last one */
+            if(actual_section <= 1){
+                actual_section = changing_sections_count;
+            }else{ /* else we come to the previous section */
+                actual_section -= 1;
+            }
+
+            /* all the changing sections are hidden except the wanted section */
+            showChangingSection(actual_section);
+        })
+    }
+
 }
